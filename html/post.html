@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="${httpBase}css/normalize.min.css">
+        <link rel="stylesheet" href="${httpBase}css/main.css">
+        <link rel="stylesheet" href="${httpBase}css/grid.css">
+
+        <script src="${httpBase}js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="${httpBase}js/config.js"></script>
+        <script src="${httpBase}js/post.js"></script>
+        <script type="text/javascript" src="${httpBase}js/jwplayer/jwplayer.js" ></script>
+        <script type="text/javascript">jwplayer.key = "J0+IRhB3+LyO0fw2I+2qT2Df8HVdPabwmJVeDWFFoplmVxFF5uw6ZlnPNXo=";</script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="wrapper">
+            <div id="top"></div>
+            <header>
+                <div id="logo">
+                    <a href="${httpBase}">
+                    <img src="${httpBase}img/logo.jpg" title="Somos mas"/>
+                    </a>
+                </div>
+                <p>${topText}</p>
+                <a id="volver-intra" href="intranet">Volver a la intranet >></a>
+            </header>
+            <a href="javascript:history.back();" class="boton btnVolver">< Volver</a>
+            <div id="prflLeft">
+                <img id="imgCate" src="${categoryImg}">
+                <p id="txtCate">${categoryDesc}</p>
+                <div id="otrosPost">
+                    <p>
+                        Otros post de: <br>
+                        <span>${categoryTitle}</span>
+                    </p>
+                    <!-- $BeginBlock postRelacionados -->
+                    <a href="${relUrl}"><img class="img50" src="${relImg}"></a>
+                    <!-- $EndBlock postRelacionados -->
+                </div>
+            </div>
+            <div id="perfilMid">     
+                <!-- $BeginBlock bloqueImagen -->
+                <div id="imgPost" style="background-image: url('${image}')"></div>
+                <!-- $EndBlock bloqueImagen -->
+                <!-- $BeginBlock bloqueVideo -->
+                <div id="videoPost"></div>
+                <script type="text/javascript">
+                    jwplayer("videoPost").setup({
+                        file: '${video}'
+                    });
+                </script>
+                <!-- $EndBlock bloqueVideo -->
+                <p>${titulo}</p>
+                <p>${texto}</p>
+                <div class="acciones">
+                    <a href="javascript:${megustaJS}" id="megustaId_${megustaId}"  class="likes fl" ${megusta}>Me Gusta</a>
+                    <a href="#" class="comentarios fr">Comentarios</a>
+                </div>
+                <form name="formComentarios" id="formComentarios" method="post" action="${formComentarios}">
+                    <input type="hidden" name="action" value="add" />
+                    <input type="hidden" name="id_usuario" value="${idUsuario}" />
+                    <input type="hidden" name="id_post" value="${idPost}" />
+                    <textarea name="comentario" id="comPost" placeholder="¿Qué te parece?"></textarea>
+                    <a href="javascript:Post.addComentario();" class="boton btnComentar fr">Comentar</a>
+                </form>
+                <div class="clearfix"></div>
+                <div id="msjesPost">
+                    <!-- $BeginBlock comentarios -->
+                    <div class="usrComent">
+                        <img src="${httpBase}img/avatar.png">
+                        <p>${comentarioTexto}</p>                        
+                    </div>
+                    <!-- $EndBlock comentarios -->
+                </div>
+            </div>        
+
+            <aside>
+                <img id="persoTL" src="${httpBase}img/personajes.png">
+                <div id="headTL"><p>Conversa con nosotros usando <span>#SomosMasCuando</span><p/></div>
+               
+            </aside>
+        </div>
+        <a name="nuevo_comentario"> </a> 
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="${httpBase}js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+        <script src="${httpBase}js/plugins.js"></script>
+        <script src="${httpBase}js/main.js"></script>
+
+        <script src="${httpBase}js/libs/jquery.isotope.min.js"></script>
+        <script src="${httpBase}js/libs/fake-element.js"></script>
+
+    </body>
+</html>

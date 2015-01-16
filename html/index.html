@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="${httpBase}css/normalize.min.css">
+        <link rel="stylesheet" href="${httpBase}css/main.css">
+        <link rel="stylesheet" href="${httpBase}css/grid.css">
+
+        <script src="${httpBase}js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="${httpBase}js/config.js"></script>
+        <script src="${httpBase}js/post.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="wrapper">
+            <div id="top"></div>
+            <header>
+                <div id="logo"><img src="${httpBase}img/logo.jpg" title="Somos mas"/></div>
+                <p>${topText}</p>
+                <a id="volver-intra" href="intranet">Volver a la intranet >></a>
+            </header>
+            <div id="menu">
+                <div><p></p></div>
+                <nav id="options">
+                    <ul id="filters" class="option-set clearfix" data-option-key="filter">
+                        <li id="menu01">
+                            <a href="#filter" data-option-value=".cate01">Nuevo Modelo Valor Comercial</a>
+                            <span class="colorBar"></span>
+                        </li>
+                        <li id="menu02">
+                            <a href="#filter" data-option-value=".cate02">red unidos</a>
+                            <span class="colorBar"></span>
+                        </li>
+                        <li id="menu03">
+                            <a href="#filter" data-option-value=".cate03">costo técnico</a>
+                            <span class="colorBar"></span>
+                        </li>
+                        <li id="menu04">
+                            <a href="#filter" data-option-value=".cate04">líderes paRa un gran lugar para trabajar</a>
+                            <span class="colorBar"></span>
+                        </li>
+                        <li id="menu05">
+                            <a href="#filter" data-option-value=".cate05">nuevo ges</a>
+                            <span class="colorBar"></span>
+                        </li>
+                        <li id="menu06">
+                            <a href="#filter" data-option-value=".cate06">ATENCIÓN ENFERMEDADES COMPLEJAS</a>
+                            <span class="colorBar"></span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+
+            <div id="container" class="clickable clearfix">  
+
+                <!-- $BeginBlock ultimosPosts -->   
+                <div class="element ${postCategoryColor}" data-symbol="${postCategoryColor}" data-category="${postCategoryColor}">
+                    <a href="${postUrl}" class="miniOverlay"></a>
+                    <img src="${postImg}">
+                    <div class="acciones" id="minipost">
+                        <a href="javascript:${megustaJS}" id="megustaId_${megustaId}" class="likes fl" ${megusta}>Me Gusta</a>
+                        <a href="${postUrl}" class="comentarios fr">Comentarios</a>
+                    </div>
+                </div>
+                <!-- $EndBlock ultimosPosts -->
+
+            </div>
+
+
+            <aside>
+                <img id="persoTL" src="${httpBase}img/personajes.png">
+                <div id="headTL"><p>${chatTitulo} <span>${chatHash}</span><p/></div>                
+               
+            </aside>
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="${httpBase}js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+        <script src="${httpBase}js/plugins.js"></script>
+        <script src="${httpBase}js/main.js"></script>
+
+        <script src="${httpBase}js/libs/jquery.isotope.min.js"></script>
+        <script src="${httpBase}js/libs/fake-element.js"></script>
+
+    </body>
+</html>
